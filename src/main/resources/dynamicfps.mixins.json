@@ -1,14 +1,22 @@
 {
   "required": true,
-  "package": "dynamicfps.mixin",
+  "package": "me.n4th4not.dynamicfps.mixin",
   "compatibilityLevel": "JAVA_17",
   "client": [
+    "DebugScreenOverlayMixin",
     "GameRendererMixin",
-    "SplashOverlayMixin",
+    "GuiMixin",
+    "LoadingOverlayMixin",
+    "MinecraftMixin",
+    "SoundEngineMixin",
     "ToastManagerMixin",
-    "ThreadExecutorMixin"
+    "WindowMixin"
   ],
   "injectors": {
     "defaultRequire": 1
-  }
+  },
+  "refmap": "dynamicfps.mixins.refmap.json",
+  "mixins": [
+    "bugfix.BlockableEventLoopMixin"
+  ]
 }

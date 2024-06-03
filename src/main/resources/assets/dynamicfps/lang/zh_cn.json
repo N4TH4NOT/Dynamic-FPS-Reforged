@@ -1,14 +1,22 @@
 {
-    "config.dynamicfps.title": "动态帧率设定",
-    "config.dynamicfps.category.general": "预设",
-    "config.dynamicfps.reduce_when_unfocused": "丢失焦点时限制帧率",
-    "config.dynamicfps.unfocused_fps": "帧率限制值",
-    "config.dynamicfps.restore_when_hovered": "窗口悬停时恢复帧率",
-    "config.dynamicfps.run_gc_on_unfocus": "丢失焦点时回收内存",
-    "config.dynamicfps.unfocused_volume": "丢失焦点时调节音量 (%)",
-    "config.dynamicfps.hidden_volume": "窗口不可见时调节音量 (%)",
-    "key.dynamicfps.toggle_forced": "强制限制帧率",
-    "key.dynamicfps.toggle_disabled": "动态帧率开关",
-    "gui.dynamicfps.hud.reducing": "动态帧率: 已强制限制帧率",
-    "gui.dynamicfps.hud.disabled": "动态帧率已禁用"
+    "config.dynamic_fps.title": "Dynamic FPS 动态帧率配置",
+
+    "config.dynamic_fps.category.general": "预设",
+    "config.dynamic_fps.category.hovered": "悬停",
+    "config.dynamic_fps.category.unfocused": "失焦",
+    "config.dynamic_fps.category.invisible": "不可见",
+
+    "config.dynamic_fps.frame_rate_target": "帧率限制值",
+    "config.dynamic_fps.frame_rate_target_description": "设置帧率限制值为 -1 以禁用帧率限制。",
+    "config.dynamic_fps.volume_multiplier": "音量设置",
+    "config.dynamic_fps.graphics_state": "图形选项",
+    "config.dynamic_fps.show_toasts": "显示提示",
+    "config.dynamic_fps.run_garbage_collector": "运行内存回收器",
+
+    "key.dynamic_fps.toggle_forced": "强制限制帧率",
+    "key.dynamic_fps.toggle_disabled": "禁用帧率限制",
+    "gui.dynamic_fps.hud.reducing": "Dynamic FPS: 已限制帧率",
+    "gui.dynamic_fps.hud.disabled": "Dynamic FPS 已禁用",
+
+    "modmenu.descriptionTranslation.dynamic_fps": "动态限制游戏帧率，使Minecraft处于后台时占用更少的资源。"
 }

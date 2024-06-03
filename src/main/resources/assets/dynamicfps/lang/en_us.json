@@ -1,14 +1,49 @@
 {
-  "config.dynamicfps.title": "Configure Dynamic FPS",
-  "config.dynamicfps.category.general": "General",
-  "config.dynamicfps.reduce_when_unfocused": "Reduce FPS when unfocused",
-  "config.dynamicfps.unfocused_fps": "Unfocused FPS target",
-  "config.dynamicfps.restore_when_hovered": "Restore FPS when hovered",
-  "config.dynamicfps.run_gc_on_unfocus": "Run GC on unfocus",
-  "config.dynamicfps.unfocused_volume": "Volume when unfocused (%)",
-  "config.dynamicfps.hidden_volume": "Volume when not visible (%)",
-  "key.dynamicfps.toggle_forced": "Force Reduced FPS (Toggle)",
-  "key.dynamicfps.toggle_disabled": "Disable Dynamic FPS (Toggle)",
-  "gui.dynamicfps.hud.reducing": "Dynamic FPS: Forcing Reduced FPS",
-  "gui.dynamicfps.hud.disabled": "Dynamic FPS Disabled"
+    "config.dynamic_fps.title": "Configure Dynamic FPS",
+
+    "config.dynamic_fps.category.general": "General",
+    "config.dynamic_fps.category.hovered": "Hovered",
+    "config.dynamic_fps.category.unfocused": "Unfocused",
+    "config.dynamic_fps.category.abandoned": "Idle",
+    "config.dynamic_fps.category.invisible": "Invisible",
+
+    "config.dynamic_fps.enabled": "Enabled",
+
+    "config.dynamic_fps.disabled": "Disabled",
+    "config.dynamic_fps.minutes": "%d Minute(s)",
+
+    "config.dynamic_fps.idle_time": "Idle timeout",
+    "config.dynamic_fps.idle_time_tooltip": "Minutes without input until Dynamic FPS activates the Idle state while the game is focused.",
+
+    "config.dynamic_fps.uncap_menu_frame_rate": "Uncap Menu FPS",
+    "config.dynamic_fps.uncap_menu_frame_rate_tooltip": "Remove the 60 FPS limit in the main menu.",
+
+    "config.dynamic_fps.volume_transition_speed_up": "Upward Volume Transition Speed",
+    "config.dynamic_fps.volume_transition_speed_down": "Downward Volume Transition Speed",
+    "config.dynamic_fps.volume_transition_speed_instant": "Immediate",
+    "config.dynamic_fps.volume_transition_speed_tooltip": "Set the speed at which the game volume will be adjusted per second.",
+
+    "config.dynamic_fps.frame_rate_target": "Frame Rate Target",
+    "config.dynamic_fps.volume_multiplier": "Volume Multiplier",
+
+    "config.dynamic_fps.graphics_state": "Graphics Options",
+    "config.dynamic_fps.graphics_state_default": "Default",
+    "config.dynamic_fps.graphics_state_reduced": "Reduced",
+    "config.dynamic_fps.graphics_state_minimal": "Minimal",
+    "config.dynamic_fps.graphics_state_minimal_tooltip": "Minimal graphics cause the world to reload!",
+
+    "config.dynamic_fps.show_toasts": "Show Toasts",
+    "config.dynamic_fps.show_toasts_tooltip": "Whether to keep displaying or delay toast notifications",
+
+    "config.dynamic_fps.run_garbage_collector": "Invoke Garbage Collector",
+    "config.dynamic_fps.run_garbage_collector_tooltip": "Free up unused memory when switching to this status",
+
+    "config.dynamic_fps.warn_cloth_config": "You need to install ConfigCloth to change configuration!",
+
+    "key.dynamic_fps.toggle_forced": "Force Unfocused Mode (Toggle)",
+    "key.dynamic_fps.toggle_disabled": "Disable Dynamic FPS (Toggle)",
+    "gui.dynamic_fps.hud.reducing": "Dynamic FPS: Forcing Reduced FPS",
+    "gui.dynamic_fps.hud.disabled": "Dynamic FPS Disabled",
+
+    "modmenu.descriptionTranslation.dynamic_fps": "Dynamically adjusts FPS so Minecraft doesn't hog resources in background."
 }

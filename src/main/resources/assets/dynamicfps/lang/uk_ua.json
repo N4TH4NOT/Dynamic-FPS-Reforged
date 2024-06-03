@@ -1,14 +1,10 @@
 {
-  "config.dynamicfps.title": "Параметри Dynamic FPS",
-  "config.dynamicfps.category.general": "Загальні",
-  "config.dynamicfps.reduce_when_unfocused": "Зменшувати частоту кадрів при згортанні",
-  "config.dynamicfps.unfocused_fps": "Макс. частота кадрів при згортанні",
-  "config.dynamicfps.restore_when_hovered": "Відновлювати частоту кадрів при наведенні",
-  "config.dynamicfps.run_gc_on_unfocus": "Запускати збирач сміття при згортанні",
-  "config.dynamicfps.unfocused_volume": "Гучність при згортанні (%)",
-  "config.dynamicfps.hidden_volume": "Гучність при прихованні (%)",
-  "key.dynamicfps.toggle_forced": "Примусово знижувати частоту кадрів (перемикання)",
-  "key.dynamicfps.toggle_disabled": "Вимкнути Dynamic FPS (перемикання)",
-  "gui.dynamicfps.hud.reducing": "Dynamic FPS: Увімкнено примусове зниження частоти кадрів",
-  "gui.dynamicfps.hud.disabled": "Dynamic FPS вимкнено"
+    "config.dynamic_fps.title": "Параметри Dynamic FPS",
+
+    "config.dynamic_fps.category.general": "Загальні",
+
+    "key.dynamic_fps.toggle_forced": "Примусово знижувати частоту кадрів (перемикання)",
+    "key.dynamic_fps.toggle_disabled": "Вимкнути Dynamic FPS (перемикання)",
+    "gui.dynamic_fps.hud.reducing": "Dynamic FPS: Увімкнено примусове зниження частоти кадрів",
+    "gui.dynamic_fps.hud.disabled": "Dynamic FPS вимкнено"
 }

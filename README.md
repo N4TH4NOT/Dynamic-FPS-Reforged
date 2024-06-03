@@ -18,17 +18,19 @@
     <a href="../issues">Request Feature</a>
   </p>
 </div>
-
-
+<div>
+    <h3 align="center" style="color: red; font-weight: 1000">DISCONTINUED 1.16.5+ FOR ALL MOD LOADERS, GO TO THE ORIGINAL MOD PAGE INSTEAD!!</h3>
+    <h4 align="center" style="margin-bottom: 24px; font-weight: 600">I remain open to any suggestions for updates, improvements or ports for other mods.</h4>
+</div>
 Dynamic FPS automatically reduces the speed at which minecraft renders when it's not focused (to 1 FPS) or hidden (no renders at all). It also fixes a bug in Vanilla Minecraft that makes it take much more performance in the background than it should.
 
-Download in [the releases section](../releases), on [Modrinth](https://modrinth.com/mod/dynamic-fps-reforged), or on [CurseForge](https://www.curseforge.com/minecraft/mc-mods/dynamic-fps-reforged).
+~~Download in [the releases section](../releases), on [Modrinth](https://modrinth.com/mod/dynamic-fps-reforged), or on [CurseForge](https://www.curseforge.com/minecraft/mc-mods/dynamic-fps-reforged).~~
 
 # Credits
 
 <div style="margin-top: 30px">
   <img src="https://avatars.githubusercontent.com/u/827762?s=48" alt="Image de profil" style="float: left; margin-right: 14px;">
-  <h3 style="margin-bottom: 10px">juliand665 (Fabric version)</h3>
+  <h3 style="margin-bottom: 10px">juliand665 ((Neo)Forge, Fabric, Quilt 1.16.5+)</h3>
   <div style="margin-left: 62px; margin-bottom: 14px">
   A big thanks to him and his contributors for their work
   to offer a functional and updated mod for each new release of Minecraft!
@@ -46,7 +48,7 @@ Download in [the releases section](../releases), on [Modrinth](https://modrinth.
 
 <div style="margin-top: 50px">
   <img src="https://avatars.githubusercontent.com/u/30438580?s=48" alt="Image de profil" style="float: left; margin-right: 14px;">
-  <h3 style="margin-bottom: 10px">N4TH4NOT (Forge version)</h3>
+  <h3 style="margin-bottom: 10px">N4TH4NOT (Forge 1.19.2 version)</h3>
   <div style="margin-left: 62px">
   It is me who has ported the original mod to Forge and who is keeping this repository updated.
   </div>
@@ -67,9 +69,10 @@ Download in [the releases section](../releases), on [Modrinth](https://modrinth.
 
 # Planned features
 
-- [x] Smooth volume transitions
-- [ ] Graphical settings interaction
+- [x] ~~Smooth volume transitions~~ (improved by the upstream)
+- [x] ~~Graphical settings interaction~~ (from the upstream)
 - [ ] Way to allow other mods to request all frames to be processed
+- [ ] Made backports for older versions ??
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
