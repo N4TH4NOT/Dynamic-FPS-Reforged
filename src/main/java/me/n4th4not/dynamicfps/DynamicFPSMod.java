@@ -2,7 +2,6 @@ package me.n4th4not.dynamicfps;
 
 import me.n4th4not.dynamicfps.compat.ClothConfig;
 import me.n4th4not.dynamicfps.compat.FREX;
-import me.n4th4not.dynamicfps.compat.FrexExtension;
 import me.n4th4not.dynamicfps.compat.GLFW;
 import me.n4th4not.dynamicfps.config.Config;
 import me.n4th4not.dynamicfps.config.DynamicFPSConfig;
@@ -18,7 +17,6 @@ import net.minecraft.Util;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screens.AlertScreen;
 import net.minecraft.client.gui.screens.LoadingOverlay;
-import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.sounds.SoundSource;
 import net.minecraftforge.client.ConfigScreenHandler;
 import net.minecraftforge.client.event.RenderGuiOverlayEvent;
@@ -93,7 +91,8 @@ public class DynamicFPSMod {
 	}
 
 	public void renderGuiOverlay(RenderGuiOverlayEvent.Post event) {
-		HudInfoRenderer.renderInfo(event.getPoseStack());
+		if (!MINECRAFT.options.renderDebug)
+			HudInfoRenderer.renderInfo(event.getPoseStack());
 	}
 
 	public static boolean disabledByUser() {
