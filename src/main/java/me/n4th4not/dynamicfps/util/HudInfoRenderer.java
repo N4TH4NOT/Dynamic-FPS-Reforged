@@ -1,10 +1,12 @@
 package me.n4th4not.dynamicfps.util;
 
 import com.mojang.blaze3d.vertex.PoseStack;
+import com.mojang.blaze3d.vertex.Tesselator;
 import com.mojang.math.Matrix4f;
 import me.n4th4not.dynamicfps.DynamicFPSMod;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.Font;
+import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.network.chat.Component;
 
 import static me.n4th4not.dynamicfps.util.Localization.gui;
@@ -23,17 +25,21 @@ public final class HudInfoRenderer {
 		int stringWidth = fontRenderer.width(component);
 		int windowWidth = minecraft.getWindow().getGuiScaledWidth();
 
+		MultiBufferSource.BufferSource buffer = MultiBufferSource.immediate(Tesselator.getInstance().getBuilder());
+
 		fontRenderer.drawInBatch(
 				component.getVisualOrderText(),
 				(windowWidth - stringWidth) / 2f, //x
 				y, //y
 				0xFFFFFFFF, //color
 				true, //shadow
-				new Matrix4f(), //matrix
-				Minecraft.getInstance().renderBuffers().bufferSource(), //buffer
+				pose.last().pose(), //matrix
+				buffer, //buffer
 				false, //transparent
 				0, //enable(!=0) -> BakedGlyph.Effect
 				255 //packedLightCoords
 		);
+
+		buffer.endBatch();
 	}
 }
