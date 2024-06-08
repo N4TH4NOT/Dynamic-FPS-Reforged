@@ -2,6 +2,7 @@ package me.n4th4not.dynamicfps;
 
 import me.n4th4not.dynamicfps.compat.ClothConfig;
 import me.n4th4not.dynamicfps.compat.FREX;
+import me.n4th4not.dynamicfps.compat.FrexExtension;
 import me.n4th4not.dynamicfps.compat.GLFW;
 import me.n4th4not.dynamicfps.config.Config;
 import me.n4th4not.dynamicfps.config.DynamicFPSConfig;
@@ -75,7 +76,15 @@ public class DynamicFPSMod {
 		ModLoadingContext.get().registerExtensionPoint(
 				ConfigScreenHandler.ConfigScreenFactory.class,
 				() -> new ConfigScreenHandler.ConfigScreenFactory(
-						(minecraft, screen) -> DynamicFPSMod.getConfigScreen(screen)
+						(minecraft, parent) -> {
+							if (!ModList.get().isLoaded("cloth-config"))
+								return new AlertScreen(
+										() -> Minecraft.getInstance().setScreen(parent),
+										config("title"),
+										config("warn_cloth_config").withStyle(ChatFormatting.RED)
+								);
+							else return ClothConfig.genConfigScreen(parent);
+						}
 				)
 		);
 
@@ -83,7 +92,7 @@ public class DynamicFPSMod {
 		MinecraftForge.EVENT_BUS.addListener(KeybindingsHandler::interaction);
 	}
 
-	public void renderGuiOverlay(RenderGuiOverlayEvent event) {
+	public void renderGuiOverlay(RenderGuiOverlayEvent.Post event) {
 		HudInfoRenderer.renderInfo(event.getPoseStack());
 	}
 
@@ -118,16 +127,6 @@ public class DynamicFPSMod {
 		MOD_CONFIG.save();
 		IdleHandler.init();
 		SmoothVolumeHandler.init();
-	}
-
-	public static Screen getConfigScreen(Screen parent) {
-		if (!ModList.get().isLoaded("cloth-config"))
-			return new AlertScreen(
-					() -> Minecraft.getInstance().setScreen(parent),
-					config("title"),
-					config("warn_cloth_config").withStyle(ChatFormatting.RED)
-			);
-        else return ClothConfig.genConfigScreen(parent);
 	}
 
 	public static void onStatusChanged(boolean userInitiated) {
