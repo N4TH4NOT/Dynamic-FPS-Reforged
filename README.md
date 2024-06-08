@@ -71,7 +71,7 @@ Dynamic FPS automatically reduces the speed at which minecraft renders when it's
 
 - [x] ~~Smooth volume transitions~~ (improved by the upstream)
 - [x] ~~Graphical settings interaction~~ (from the upstream)
-- [ ] Way to allow other mods to request all frames to be processed
+- [x] ~~Way to allow other mods to request all frames to be processed~~
 - [ ] Made backports for older versions ??
 
 <!-- MARKDOWN LINKS & IMAGES -->
