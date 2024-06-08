@@ -1,10 +1,14 @@
 package me.n4th4not.dynamicfps;
 
 import me.n4th4not.dynamicfps.compat.ClothConfig;
+import me.n4th4not.dynamicfps.compat.FREX;
 import me.n4th4not.dynamicfps.compat.GLFW;
 import me.n4th4not.dynamicfps.config.Config;
 import me.n4th4not.dynamicfps.config.DynamicFPSConfig;
-import me.n4th4not.dynamicfps.util.*;
+import me.n4th4not.dynamicfps.util.HudInfoRenderer;
+import me.n4th4not.dynamicfps.util.IdleHandler;
+import me.n4th4not.dynamicfps.util.OptionsHolder;
+import me.n4th4not.dynamicfps.util.SmoothVolumeHandler;
 import me.n4th4not.dynamicfps.util.duck.DuckLoadingOverlay;
 import me.n4th4not.dynamicfps.util.duck.DuckSoundEngine;
 import me.n4th4not.dynamicfps.util.event.WindowObserver;
@@ -92,7 +96,7 @@ public class DynamicFPSMod {
 	}
 
 	public static boolean isDisabled() {
-		return KEYBIND_DISABLED || !MOD_CONFIG.enabled();
+		return FREX.isActive() || KEYBIND_DISABLED || !MOD_CONFIG.enabled();
 	}
 
 	public static String whyIsTheModNotWorking() {
@@ -100,7 +104,7 @@ public class DynamicFPSMod {
 
 		if (KEYBIND_DISABLED) results.add("keybinding");
 		if (!MOD_CONFIG.enabled()) results.add("mod config");
-//		if (ModCompat.getInstance().isDisabled()) results.add("another mod");
+		if (FREX.isActive()) results.add("another mod");
 
 		return String.join(", ", results);
 	}
