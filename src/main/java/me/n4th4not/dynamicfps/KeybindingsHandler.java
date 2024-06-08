@@ -9,7 +9,8 @@ import net.minecraftforge.client.settings.KeyConflictContext;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
-@Mod.EventBusSubscriber
+import javax.swing.*;
+
 public class KeybindingsHandler {
     private static final KeyMapping FORCE_KEYBINDING = new KeyMapping(
             Localization.keyBinding( "toggle_forced"),
@@ -27,10 +28,9 @@ public class KeybindingsHandler {
             KeyMapping.CATEGORY_MISC
     );
 
-    @SubscribeEvent
-    public static void interaction(InputEvent.InteractionKeyMappingTriggered event) {
-        if (event.getKeyMapping().same(ACTIVATION_KEYBINDING)) DynamicFPSMod.toggleDisabled();
-        else if (event.getKeyMapping().same(FORCE_KEYBINDING)) DynamicFPSMod.toggleForceLowFPS();
+    public static void interaction(InputEvent event) {
+        if (ACTIVATION_KEYBINDING.isDown()) DynamicFPSMod.toggleDisabled();
+        else if (FORCE_KEYBINDING.isDown()) DynamicFPSMod.toggleForceLowFPS();
     }
 
     @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)

@@ -16,17 +16,12 @@ public class GLFW {
      * Dynamic FPS releases and captures the cursor in tandem with window focus.
      */
     public static void applyWorkaround() {
-        if (!useWorkaround()) {
-            return;
-        }
+        if (!useWorkaround()) return;
 
-        if (DynamicFPSMod.getWindow() == null) {
-            return;
-        }
+        if (DynamicFPSMod.getWindow() == null) return;
 
-        if (!DynamicFPSMod.getWindow().isFocused()) {
-            minecraft.mouseHandler.releaseMouse();
-        } else {
+        if (!DynamicFPSMod.getWindow().isFocused()) minecraft.mouseHandler.releaseMouse();
+        else {
             // Grabbing the mouse only works while Minecraft
             // Agrees that the window is focused. The mod is
             // A little too fast for this, so we schedule it
